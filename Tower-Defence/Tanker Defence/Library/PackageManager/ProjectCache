@@ -5,22 +5,22 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638380690813179506
-    m_Hash: 3746533081
+      ticks: 638384213460538543
+    m_Hash: 82642346
   m_LockFileStatus:
     m_FilePath: D:/git fork/game/Tower-Defence/Tanker Defence/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638380690813308576
-    m_Hash: 3869799399
+      ticks: 638384213921705531
+    m_Hash: 1677593207
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
 m_ProjectPath: D:/git fork/game/Tower-Defence/Tanker Defence/Packages
-m_EditorVersion: 2022.3.10f1 (ff3792e53c62)
+m_EditorVersion: 2022.3.15f1 (b58023a2b463)
 m_ResolvedPackages:
 - packageId: com.unity.collab-proxy@2.2.0
   testable: 0
@@ -115,13 +115,8 @@ m_ResolvedPackages:
     - 2.1.0
     - 2.2.0
     compatible:
-    - 2.0.7
-    - 2.1.0-preview.3
-    - 2.1.0-preview.5
-    - 2.1.0-preview.6
-    - 2.1.0
     - 2.2.0
-    recommended: 2.0.7
+    recommended: 2.2.0
     deprecated: []
   dependencies: []
   resolvedDependencies: []
@@ -159,7 +154,7 @@ m_ResolvedPackages:
     revision: 33c8fba1793946be3c73f738edf70db0b5546afd
     path: 
   unityLifecycle:
-    version: 2.0.7
+    version: 2.2.0
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -214,7 +209,7 @@ m_ResolvedPackages:
     version: default
   resolvedDependencies:
   - name: com.unity.2d.animation
-    version: 9.0.3
+    version: 9.0.4
   - name: com.unity.2d.common
     version: 8.0.1
   - name: com.unity.2d.sprite
@@ -232,7 +227,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.8
+    version: 1.8.11
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -252,7 +247,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.tilemap
     version: 1.0.0
   - name: com.unity.2d.tilemap.extras
-    version: 3.1.1
+    version: 3.1.2
   - name: com.unity.ugui
     version: 1.0.0
   - name: com.unity.2d.aseprite
@@ -284,12 +279,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.ide.rider@3.0.24
+- packageId: com.unity.ide.rider@3.0.26
   testable: 0
   isDirectDependency: 1
-  version: 3.0.24
+  version: 3.0.26
   source: 1
-  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.ide.rider@3.0.24
+  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.ide.rider@3.0.26
   assetPath: Packages/com.unity.ide.rider
   name: com.unity.ide.rider
   displayName: JetBrains Rider Editor
@@ -348,8 +343,6 @@ m_ResolvedPackages:
     - 3.0.26
     - 3.0.27
     compatible:
-    - 3.0.24
-    - 3.0.25
     - 3.0.26
     - 3.0.27
     recommended: 3.0.27
@@ -371,28 +364,28 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638221653400000000
+  datePublishedTicks: 638326061920000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.rider@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
-    revision: f5decc642e3618ce1c6827d47318260e61d64714
+    revision: 2b29b1152946c13d1ecebf6fc681a59cd8b4d399
     path: 
   unityLifecycle:
-    version: 3.0.24
+    version: 3.0.26
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.ide.visualstudio@2.0.18
+- packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 1
-  version: 2.0.18
+  version: 2.0.22
   source: 1
-  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.ide.visualstudio@2.0.18
+  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.ide.visualstudio@2.0.22
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -401,7 +394,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: assets
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -434,9 +427,6 @@ m_ResolvedPackages:
     - 2.0.21
     - 2.0.22
     compatible:
-    - 2.0.18
-    - 2.0.20
-    - 2.0.21
     - 2.0.22
     recommended: 2.0.22
     deprecated: []
@@ -463,16 +453,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638173205920000000
+  datePublishedTicks: 638326061910000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: 9d3c07127cbe1916b8abbfd18f71fb8d9df8008c
+    revision: 700b44077345e97d37d464ff25507638983aed64
     path: 
   unityLifecycle:
-    version: 2.0.18
+    version: 2.0.22
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -793,12 +783,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.timeline@1.7.5
+- packageId: com.unity.timeline@1.7.6
   testable: 0
   isDirectDependency: 1
-  version: 1.7.5
+  version: 1.7.6
   source: 1
-  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.timeline@1.7.5
+  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.timeline@1.7.6
   assetPath: Packages/com.unity.timeline
   name: com.unity.timeline
   displayName: Timeline
@@ -900,7 +890,6 @@ m_ResolvedPackages:
     - 1.8.5
     - 1.8.6
     compatible:
-    - 1.7.5
     - 1.7.6
     - 1.8.0
     - 1.8.1
@@ -945,16 +934,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638229649600000000
+  datePublishedTicks: 638326112840000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.timeline@1.7/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.timeline.git
-    revision: fdb1ca9a2c2a131e0ff9cb257b2eae3b53337b3a
+    revision: 02f49ada64a9f88044207cf42ba407dc634ef8e6
     path: 
   unityLifecycle:
-    version: 1.7.5
+    version: 1.7.6
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -1032,12 +1021,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.visualscripting@1.9.0
+- packageId: com.unity.visualscripting@1.9.1
   testable: 0
   isDirectDependency: 1
-  version: 1.9.0
+  version: 1.9.1
   source: 1
-  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.visualscripting@1.9.0
+  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.visualscripting@1.9.1
   assetPath: Packages/com.unity.visualscripting
   name: com.unity.visualscripting
   displayName: Visual Scripting
@@ -1083,7 +1072,6 @@ m_ResolvedPackages:
     - 1.9.0
     - 1.9.1
     compatible:
-    - 1.9.0
     - 1.9.1
     recommended: 1.9.1
     deprecated:
@@ -1113,16 +1101,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638267547090000000
+  datePublishedTicks: 638284821510000000
   documentationUrl: 
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.visualscripting.git
-    revision: 21b38599b7fcf9bdccd964bdb90710e6a1094810
+    revision: 5e78e9c354ed1567dbcea08e2bd9992e4a473cfb
     path: 
   unityLifecycle:
-    version: 1.9.0
+    version: 1.9.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -3101,12 +3089,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.2d.animation@9.0.3
+- packageId: com.unity.2d.animation@9.0.4
   testable: 0
   isDirectDependency: 0
-  version: 9.0.3
+  version: 9.0.4
   source: 1
-  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.2d.animation@9.0.3
+  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.2d.animation@9.0.4
   assetPath: Packages/com.unity.2d.animation
   name: com.unity.2d.animation
   displayName: 2D Animation
@@ -3115,7 +3103,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: asset
+  type: assets
   description: 2D Animation provides all the necessary tooling and runtime components
     for skeletal animation using Sprites.
   status: 0
@@ -3241,7 +3229,6 @@ m_ResolvedPackages:
     - 10.0.2
     - 10.0.3
     compatible:
-    - 9.0.3
     - 9.0.4
     recommended: 9.0.4
     deprecated: []
@@ -3274,7 +3261,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.8
+    version: 1.8.11
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -3294,16 +3281,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638191394980000000
+  datePublishedTicks: 638320873940000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.animation@9.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/2d.git
-    revision: 7d8e0c5910334b5bcf7795fe32bcde0a11d57109
+    revision: be60dd1716d39b00d03d87668a09a4fc1d4102b6
     path: 
   unityLifecycle:
-    version: 9.0.3
+    version: 9.0.4
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -3503,7 +3490,7 @@ m_ResolvedPackages:
     version: 1.0.0
   resolvedDependencies:
   - name: com.unity.2d.animation
-    version: 9.0.3
+    version: 9.0.4
   - name: com.unity.2d.common
     version: 8.0.1
   - name: com.unity.2d.sprite
@@ -3521,7 +3508,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.8
+    version: 1.8.11
   - name: com.unity.collections
     version: 1.2.4
   - name: com.unity.test-framework
@@ -3749,7 +3736,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.8
+    version: 1.8.11
   - name: com.unity.modules.physics2d
     version: 1.0.0
   keywords:
@@ -3858,12 +3845,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.2d.tilemap.extras@3.1.1
+- packageId: com.unity.2d.tilemap.extras@3.1.2
   testable: 0
   isDirectDependency: 0
-  version: 3.1.1
+  version: 3.1.2
   source: 1
-  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.2d.tilemap.extras@3.1.1
+  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.2d.tilemap.extras@3.1.2
   assetPath: Packages/com.unity.2d.tilemap.extras
   name: com.unity.2d.tilemap.extras
   displayName: 2D Tilemap Extras
@@ -3929,7 +3916,6 @@ m_ResolvedPackages:
     - 4.0.1
     - 4.0.2
     compatible:
-    - 3.1.1
     - 3.1.2
     recommended: 3.1.2
     deprecated: []
@@ -3971,16 +3957,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638234725240000000
+  datePublishedTicks: 638320873890000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.2d.tilemap.extras@3.1/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.com/Unity-Technologies/2d-extras.git
-    revision: 04abca0a975bb264c1f7530288b4ddfa2f4c45ea
+    revision: 741b52ca8bcd71b4e016208dbfe792374ca334c8
     path: 
   unityLifecycle:
-    version: 3.1.1
+    version: 3.1.2
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
@@ -4047,7 +4033,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.8
+    version: 1.8.11
   keywords:
   - 2d
   - Aseprite
@@ -4185,7 +4171,7 @@ m_ResolvedPackages:
   - name: com.unity.modules.animation
     version: 1.0.0
   - name: com.unity.burst
-    version: 1.8.8
+    version: 1.8.11
   keywords:
   - 2d
   registry:
@@ -4387,6 +4373,8 @@ m_ResolvedPackages:
     - 2.2.1
     - 2.3.0-exp.1
     - 2.3.0-pre.3
+    - 2.4.0-exp.2
+    - 2.4.0-pre.2
     recommended: 1.2.4
     deprecated: []
   dependencies:
@@ -4396,7 +4384,7 @@ m_ResolvedPackages:
     version: 1.1.31
   resolvedDependencies:
   - name: com.unity.burst
-    version: 1.8.8
+    version: 1.8.11
   - name: com.unity.mathematics
     version: 1.2.6
   - name: com.unity.test-framework
@@ -4437,12 +4425,12 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
-- packageId: com.unity.burst@1.8.8
+- packageId: com.unity.burst@1.8.11
   testable: 0
   isDirectDependency: 0
-  version: 1.8.8
+  version: 1.8.11
   source: 1
-  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.burst@1.8.8
+  resolvedPath: D:\git fork\game\Tower-Defence\Tanker Defence\Library\PackageCache\com.unity.burst@1.8.11
   assetPath: Packages/com.unity.burst
   name: com.unity.burst
   displayName: Burst
@@ -4585,9 +4573,6 @@ m_ResolvedPackages:
     - 1.8.10
     - 1.8.11
     compatible:
-    - 1.8.8
-    - 1.8.9
-    - 1.8.10
     - 1.8.11
     recommended: 1.8.11
     deprecated: []
@@ -4608,16 +4593,16 @@ m_ResolvedPackages:
     configSource: 0
   hideInEditor: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 638271934420000000
+  datePublishedTicks: 638360965820000000
   documentationUrl: https://docs.unity3d.com/Packages/com.unity.burst@1.8/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: git@github.cds.internal.unity3d.com:unity/burst
-    revision: 7673d9a736112fc9d58f32024c19150c2fa6d8ea
+    revision: 1d80ef69a5caadb47bb90e69e6fc822e3a334bd3
     path: 
   unityLifecycle:
-    version: 1.8.8
+    version: 1.8.11
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
