@@ -1,16 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager main;
 
+    [Header("References")]
+    [SerializeField] private GameObject gameOverMenu;
     public Transform startPoint;
     public Transform[] path;
+    [SerializeField] private Text livesText;
 
-    public int currency;
+    [Header("Attribute")]
+    [SerializeField] private int livesBase = 20;
+    public int currency = 250;
+
+    private int lives = 20;
+    private bool gameOver = false;
+    
+
+    public int Lives 
+    {
+        get 
+        {
+            return lives; 
+        } 
+        set 
+        {
+            this.lives = value;
+
+            if (lives <= 0)
+            {
+                this.lives = 0;
+                GameOver();
+            }
+
+            livesText.text = value.ToString() + "/" + livesBase.ToString();
+        } 
+    }
 
     private void Awake()
     {
@@ -19,7 +50,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        currency = 300;
+
     }
 
     public void IncreaseCurrency(int amount)
@@ -39,5 +70,15 @@ public class LevelManager : MonoBehaviour
             Debug.Log("You do not have enough to purchase this item");
             return false;
         }
+    }
+
+    public void GameOver()
+    {
+        if (!gameOver)
+        {
+            gameOver = true;
+            SceneManager.LoadScene("GameOver");
+        }
+
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    AudioManager audioManager;
+
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
 
@@ -12,8 +14,14 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target;
     private int pathIndex = 0;
+    private float speedFollowerWaves = 0.05f;
 
     private float baseSpeed;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -31,6 +39,8 @@ public class EnemyMovement : MonoBehaviour
             {
                 EnemySpawner.onEnemyDestroy.Invoke();
                 Destroy(gameObject);
+                LevelManager.main.Lives--;
+                audioManager.PlaySFX(audioManager.enemyToPortalOut);
                 return;
             }
             else

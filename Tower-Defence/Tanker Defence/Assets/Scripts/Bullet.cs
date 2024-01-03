@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    AudioManager audioManager;
+
     [Header("References")]
     [SerializeField] private Rigidbody2D rb;
 
@@ -13,6 +15,11 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int bulletDamage = 1;
 
     private Transform target;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     public void SetTarget(Transform _target)
     {
@@ -25,6 +32,8 @@ public class Bullet : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.velocity = direction * bulletSpeed;
+        audioManager.PlaySFX(audioManager.bulletTurret);
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -32,4 +41,5 @@ public class Bullet : MonoBehaviour
         other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
         Destroy(gameObject);
     }
+
 }

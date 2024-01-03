@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Diagnostics;
+using TMPro;
 using UnityEditor;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Turret : MonoBehaviour
@@ -13,32 +15,57 @@ public class Turret : MonoBehaviour
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
+    [SerializeField] private Image _ImageRange;
+    [SerializeField] private Text costUpgrade;
+    [SerializeField] private Text rangeUpgrade;
+    [SerializeField] private Text bpsUpgrade;
+    [SerializeField] private Text upgradeOrMax;
+
 
     [Header("Attribute")]
     [SerializeField] private float targetingRange = 3.5f;
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] private float bps = 1f;    //Bullets Per Second
     [SerializeField] private int baseUpgradeCost = 100;
+    [SerializeField] private float perCostUpgrade = 0.7f;
+    [SerializeField] private float perBpsUpgrade = 0.15f;
+    [SerializeField] private float perRangeUpgrade = 0.1f;
 
     private float bpsBase;
-    private float targettingRangeBase;
-
-    private Transform target;
+    private float targetingRangeBase;
+ 
+    private Transform target;  
     private float timeUntilFire;
+    private int upgradeCostNext;
 
     private int level = 1;
+    private int levelMaxUpgrade = 6;
+
+    private float widthScale;
+    private float heightScale;
+    private float scaleRange = 0.023f;
 
     private void Start()
     {
+        widthScale = targetingRange;
+        heightScale = targetingRange;
         bpsBase = bps;
-        targettingRangeBase = targetingRange;
+        targetingRangeBase = targetingRange;
 
-        upgradeButton.onClick.AddListener(Upgrade);
+        upgradeCostNext = baseUpgradeCost;
+        baseUpgradeCost = CalculateCost();
+
+
+
+        SetRange();
+        TextUpgrade();
+
+        upgradeButton.onClick.AddListener(UpgradeTurret);
     }
 
     private void Update()
     {
-        if(target == null)
+        if (target == null)
         {
             FindTarget();
             return;
@@ -61,7 +88,7 @@ public class Turret : MonoBehaviour
             }
         }
     }
-    
+
     private void Shoot()
     {
         GameObject bulletObj = Instantiate(bulletPreFab, firingPoint.position, Quaternion.identity);
@@ -73,7 +100,7 @@ public class Turret : MonoBehaviour
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)transform.position, 0f, enemyMask);
 
-        if(hits.Length > 0 )
+        if (hits.Length > 0)
         {
             target = hits[0].transform;
         }
@@ -101,40 +128,79 @@ public class Turret : MonoBehaviour
     {
         upgradeUI.SetActive(false);
         UIManager.main.SetHoveringState(false);
+
     }
 
-    public void Upgrade()
+    public void UpgradeTurret()
     {
-        if (CalculateCost() > LevelManager.main.currency) return;
-        
+        if (baseUpgradeCost > LevelManager.main.currency) return;
+
         LevelManager.main.SpendCurrency(CalculateCost());
 
-        level++;
+        if (level < levelMaxUpgrade)
+        {
+            level++;
+        }
+        else
+        {
+            level = levelMaxUpgrade;
+            LevelManager.main.currency += baseUpgradeCost;
+        }
 
+        baseUpgradeCost = CalculateCost();
         bps = CalculateBPS();
         targetingRange = CalculateRange();
 
-        CloseUpgradeUI();
-        Debug.Log("New BPS: " + bps);
-        Debug.Log("New BPS: " + targetingRange);
-        Debug.Log("New BPS: " + CalculateCost());
-    }
+        SetRange();
+        TextUpgrade();
 
+        CloseUpgradeUI();
+
+    }
 
     private int CalculateCost()
     {
-        return Mathf.RoundToInt(baseUpgradeCost * Mathf.Pow(level, 0.8f));
+        return Mathf.RoundToInt(upgradeCostNext * (1f + level * perCostUpgrade));
+        
     }
+
     private float CalculateBPS()
     {
-        return bpsBase * Mathf.Pow(level, 0.6f);
+        return bpsBase * (1f + level * perBpsUpgrade);
     }
 
     private float CalculateRange()
     {
-        return targettingRangeBase * Mathf.Pow(level, 0.4f); 
+        return targetingRangeBase * (1f + level * perRangeUpgrade);
     }
 
+    private void SetRange()
+    {
+        widthScale = targetingRange;
+        heightScale = targetingRange;
+        _ImageRange.rectTransform.localScale = new Vector2(widthScale, heightScale) * scaleRange;
+    }
+
+    private void TextUpgrade()
+    {
+
+
+        if (level < levelMaxUpgrade)
+        {
+            upgradeOrMax.text = "UPGRADE";
+            costUpgrade.text = baseUpgradeCost.ToString() + "$";
+            bpsUpgrade.text = bps.ToString();
+            rangeUpgrade.text = targetingRange.ToString();
+        }
+        else
+        {
+            upgradeOrMax.text = "MAX";
+            costUpgrade.text = "MAX";
+        }
+        
+    }  
+
+    
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
