@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5519453809558473878}
   - component: {fileID: 1817043640671950892}
   - component: {fileID: -1447633625593372971}
+  - component: {fileID: 7967641961538500434}
   m_Layer: 6
   m_Name: Enemy Ghost
   m_TagString: Enemy
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 6, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1745414716839089201}
@@ -78,8 +79,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5383051665984936242, guid: efef9d7769d7e1c4fbf765974d26533c, type: 3}
-  m_Color: {r: 0.99525434, g: 1, b: 0.48490566, a: 1}
+  m_Sprite: {fileID: 997543046663750981, guid: efef9d7769d7e1c4fbf765974d26533c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -165,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7740938330360117061}
   moveSpeed: 1.5
+  currentEnemyTarget: {fileID: 0}
+  EnemyTarget: {fileID: 0}
 --- !u!114 &-1447633625593372971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,8 +181,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 6118684473898322456}
-  hitPoint: 7
-  currencyWorth: 28
+  hitPoint: 8
+  currencyWorth: 32
+--- !u!95 &7967641961538500434
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066493538545138076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 263e30336dc51a04ea1596b6dd7a4185, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &3907142353396168392
 PrefabInstance:
   m_ObjectHideFlags: 0

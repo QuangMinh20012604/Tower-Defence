@@ -208,13 +208,13 @@ MonoBehaviour:
   rangeUpgrade: {fileID: 7784051850288099530}
   bpsUpgrade: {fileID: 2709281220716034359}
   upgradeOrMax: {fileID: 8724439443671560486}
-  targetingRange: 1.5
-  rotationSpeed: 360
+  targetingRange: 2
+  rotationSpeed: 720
   bps: 1
   baseUpgradeCost: 100
   perCostUpgrade: 0.5
-  perBpsUpgrade: 0.24
-  perRangeUpgrade: 0.12
+  perBpsUpgrade: 0.27
+  perRangeUpgrade: 0.06
 --- !u!1 &9196957181384344462
 GameObject:
   m_ObjectHideFlags: 0

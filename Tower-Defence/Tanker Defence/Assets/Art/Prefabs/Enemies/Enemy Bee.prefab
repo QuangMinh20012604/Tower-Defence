@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5519453809558473878}
   - component: {fileID: 1817043640671950892}
   - component: {fileID: -1447633625593372971}
+  - component: {fileID: 265670790355620139}
   m_Layer: 6
   m_Name: Enemy Bee
   m_TagString: Enemy
@@ -78,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6065602599337010669, guid: c620b290253502147abb125c9ccf4f5b, type: 3}
+  m_Sprite: {fileID: -7659945631384244969, guid: 8721cbbfe3ba6a8418cd21a8de3a410c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -165,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7740938330360117061}
   moveSpeed: 2.5
+  currentEnemyTarget: {fileID: 0}
+  EnemyTarget: {fileID: 0}
 --- !u!114 &-1447633625593372971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,8 +181,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 1734702133686970205}
-  hitPoint: 4
+  hitPoint: 5
   currencyWorth: 20
+--- !u!95 &265670790355620139
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066493538545138076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a0f8afa36f29f074396314ab41f8734f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &8846191440462715789
 PrefabInstance:
   m_ObjectHideFlags: 0

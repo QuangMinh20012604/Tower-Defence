@@ -216,7 +216,7 @@ MonoBehaviour:
   perApsUpgrade: 0.15
   perRangeUpgrade: 0.16
   perSlowSpeedUpgrade: 0.2
-  perFreezeTimeUpgrade: 0.25
+  perFreezeTimeUpgrade: 0.15
 --- !u!1 &9196957181384344462
 GameObject:
   m_ObjectHideFlags: 0

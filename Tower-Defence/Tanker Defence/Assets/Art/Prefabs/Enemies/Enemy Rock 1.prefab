@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5519453809558473878}
   - component: {fileID: 1817043640671950892}
   - component: {fileID: -1447633625593372971}
+  - component: {fileID: 8795207015978298400}
   m_Layer: 6
   m_Name: Enemy Rock 1
   m_TagString: Enemy
@@ -165,6 +166,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 7740938330360117061}
   moveSpeed: 1.75
+  currentEnemyTarget: {fileID: 0}
+  EnemyTarget: {fileID: 0}
 --- !u!114 &-1447633625593372971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,8 +181,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 6118684473898322456}
-  hitPoint: 10
-  currencyWorth: 40
+  hitPoint: 12
+  currencyWorth: 48
+--- !u!95 &8795207015978298400
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7066493538545138076}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 50b4ef8c2d760174192eff11640f1a7f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &3907142353396168392
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -194,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 654332116421224839, guid: cec19b249f3293f4fa40c629e4218b72, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.01
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 654332116421224839, guid: cec19b249f3293f4fa40c629e4218b72, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -206,7 +230,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2014625671118164143, guid: cec19b249f3293f4fa40c629e4218b72, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.01
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2014625671118164143, guid: cec19b249f3293f4fa40c629e4218b72, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -298,7 +322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6893725842580595004, guid: cec19b249f3293f4fa40c629e4218b72, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.025
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 6893725842580595004, guid: cec19b249f3293f4fa40c629e4218b72, type: 3}
       propertyPath: m_AnchoredPosition.y
